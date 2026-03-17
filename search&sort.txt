@@ -1,0 +1,156 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+import java.util.Arrays;
+
+class Main {
+    public static int linearSearch(int[] arr, int key){
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] == key) return i;
+        }
+        return -1;
+    }
+    
+    public static int binarySearchAsc(int arr[], int key){
+        int left = 0;
+        int right = arr.length - 1;
+        while(left<=right){
+            int mid = (left + right) / 2;
+            if(arr[mid] == key) return mid;
+            else if (arr[mid] < key) left = mid + 1;
+            else right = mid - 1;
+        }
+        return -1;
+    }
+    
+    public static int binarySearchDesc(int arr[], int key){
+        int left = 0;
+        int right = arr.length - 1;
+        while(left <= right){
+            int mid = (right + left)/2;
+            if(arr[mid] == key) return mid;
+            else if(arr[mid] > key) left = mid + 1;
+            else right = mid - 1;
+        }
+        return -1;
+    }
+    
+    public static void selectionSortAsc(int[] arr){
+        for(int i = 0; i<arr.length-1; i++){
+            int minIndex = i;
+            for(int j = i+1; j<arr.length; j++){
+                if(arr[j] < arr[minIndex]) minIndex = j;
+            }
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+    
+    public static void selectionSortDesc(int[] arr){
+        for(int i=0; i<arr.length-1; i++){
+            int maxIndex = i;
+            for(int j = i + 1; j<arr.length; j++){
+                if(arr[j] > arr[i]) maxIndex = j;
+            }
+            int temp = arr[i];
+            arr[i] = arr[maxIndex];
+            arr[maxIndex] = temp;
+        }
+    }
+    
+    public static void insertionSortAsc(int[] arr){
+        for(int i = 1; i<arr.length; i++){
+            int key = arr[i];
+            int j = i -1;
+            while(j>=0 && arr[j] > key){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = key;
+        }
+    }
+    
+    public static void insertionSortDesc(int[] arr){
+        for(int i = 1; i<arr.length; i++){
+            int key = arr[i];
+            int j = i - 1;
+            while(j>=0 && arr[j] < key){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = key;
+        }
+    }
+    
+    public static void bubbleSortAsc(int[] arr){
+        for(int i = 0; i < arr.length - 1; i++){
+            for(int j = 0; j < arr.length - i - 1; j++){
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+    }
+    
+    public static void bubbleSortDesc(int[] arr){
+        for(int i = 0; i < arr.length - 1; i++){
+            for(int j = 0; j < arr.length - i - 1; j++){
+                if(arr[j]<arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+    }
+    
+    public static void main(String arg[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("nhap so phan tu mang: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            System.out.print("nhap phan tu thu "+(i+1)+" : ");
+            arr[i] = sc.nextInt();
+        }
+        
+        // LINEAR SEARCH
+        // System.out.print("\nnhap phan tu can tim: ");
+        // int searchValue = sc.nextInt();
+        // int searchIndex = linearSearch(arr,searchValue);
+        // System.out.print("vi tri phan tu can tim la: "+searchIndex);
+        
+        // BINARY SEARCH ASC
+        // System.out.print("\nnhap phan tu can tim: ");
+        // int searchValue = sc.nextInt();
+        // int searchIndex = binarySearchAsc(arr,searchValue);
+        // System.out.print("vi tri phan tu can tim la: "+searchIndex);
+        
+        // BINARY SEARCH DESC
+        // System.out.print("\nnhap phan tu can tim: ");
+        // int searchValue = sc.nextInt();
+        // int searchIndex = binarySearchDesc(arr,searchValue);
+        // System.out.print("vi tri phan tu can tim la: "+searchIndex);
+        
+        // SELECTION SORT
+        // selectionSortAsc(arr);
+        // System.out.print("selection sort ascending: "+Arrays.toString(arr));
+        // selectionSortDesc(arr);
+        // System.out.print("\nselection sort descending: "+Arrays.toString(arr));
+
+        // INSERTION SORT
+        // insertionSortAsc(arr);
+        // System.out.print("insertion sort ascending: "+Arrays.toString(arr));
+        // insertionSortDesc(arr);
+        // System.out.print("\ninsertion sort descending: "+Arrays.toString(arr));
+        
+        // INSERTION SORT
+        // bubbleSortAsc(arr);
+        // System.out.print("bubble sort ascending: "+Arrays.toString(arr));
+        // bubbleSortDesc(arr);
+        // System.out.print("\nbubble sort descending: "+Arrays.toString(arr));
+    }
+}
