@@ -1,0 +1,18 @@
+        Employee
+        ---------
+        - name
+        - id
+        - salary
+        ---------
+        + getSalary()
+        + increaseSalary()
+        + toString()
+              ▲ (ke thua)
+      ┌───────┴────────┐
+      │                │
+   Manager         Developer
+   --------        ----------
+   - bonus         - programmingLanguage
+   --------        ----------
+   + getSalary()   + getSalary()
+   + toString()    + toString()

@@ -1,0 +1,14 @@
+            Product
+        ----------------
+        - name
+        - price
+        ----------------
+        + getDiscount()
+        + getDiscount(int)
+        + getFinalPrice()
+        + getFinalPrice(int)
+               ▲
+   ┌───────────┼───────────┐
+   │           │           │
+Electronics  Clothing     Food
+   10%         20%        5%

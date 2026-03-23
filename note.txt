@@ -150,3 +150,9 @@ public static void bubbleSortDesc(int[] arr){
 }
 
 -----------------------------------------------------
+
+| Modifier  | Cùng class  | Lớp con | Bên ngoài |
+| --------- | ----------  | ------- | --------- |
+| private   | ✅          | ❌       | ❌       |
+| protected | ✅          | ✅       | ❌       |
+| public    | ✅          | ✅       | ✅       |
