@@ -1,0 +1,195 @@
+1. Bổ từ truy cập (Access Modifiers)
+🔹 Khái niệm
+
+Quy định phạm vi truy cập của biến, method, class.
+
+🔹 Các loại
+| Modifier  | Cùng class | Cùng package | Khác package | Kế thừa |
+| --------- | ---------- | ------------ | ------------ | ------- |
+| private   | ✔          | ✘            | ✘            | ✘       |
+| default   | ✔          | ✔            | ✘            | ✘       |
+| protected | ✔          | ✔            | ✘            | ✔       |
+| public    | ✔          | ✔            | ✔            | ✔       |
+
+🔹 Ví dụ
+class Person {
+    private String name;   // chỉ dùng trong class
+    public int age;        // dùng ở mọi nơi
+}
+
+-----------------------------------------------------------
+2. Method (Phương thức)
+🔹 Khái niệm
+Là hàm trong Java, chứa logic xử lý.
+
+🔹 Cú pháp
+returnType methodName(parameter) {
+    // code
+}
+🔹 Ví dụ
+public int sum(int a, int b) {
+    return a + b;
+}
+🔹 Cách dùng
+int result = sum(3, 5);
+
+-------------------------------------------------------------
+3. Lớp (Class) và từ khóa this
+🔹 Khái niệm Class
+Là bản thiết kế (blueprint) để tạo đối tượng.
+
+🔹 Cú pháp
+class Student {
+    String name;
+    int age;
+}
+🔹 Từ khóa this
+Đại diện cho đối tượng hiện tại
+Dùng để phân biệt biến
+🔹 Ví dụ
+class Student {
+    String name;
+
+    public Student(String name) {
+        this.name = name; // phân biệt biến
+    }
+}
+
+--------------------------------------------------------------
+4. Đối tượng (Object)
+🔹 Khái niệm
+Là thể hiện cụ thể của class.
+
+🔹 Cách tạo
+ClassName obj = new ClassName();
+🔹 Ví dụ
+Student s1 = new Student("An");
+
+---------------------------------------------------------------
+5. Từ khóa static và final
+🔹 static
+Thuộc về class, không cần tạo object
+class Test {
+    static int count = 0;
+}
+
+Dùng:
+
+Test.count = 10;
+🔹 final
+Không thay đổi
+| Dùng cho | Ý nghĩa        |
+| -------- | -------------- |
+| biến     | hằng số        |
+| method   | không override |
+| class    | không kế thừa  |
+
+ví dụ:
+final int x = 10;
+
+------------------------------------------------------------
+
+6. Tính đóng gói (Encapsulation)
+🔹 Khái niệm
+Ẩn dữ liệu, chỉ cho truy cập qua method.
+
+🔹 Cách dùng
+biến private
+dùng getter/setter
+🔹 Ví dụ
+class Person {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+---------------------------------------------------------------
+
+7. Tính kế thừa (Inheritance)
+🔹 Khái niệm
+Class con kế thừa class cha.
+
+🔹 Cú pháp
+class Child extends Parent {
+}
+🔹 Ví dụ
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+}
+
+--------------------------------------------------------------
+
+8. Tính đa hình (Polymorphism)
+🔹 Khái niệm
+Một method có nhiều cách thực hiện.
+
+🔹 2 dạng
+✔ Overloading (nạp chồng)
+
+int sum(int a, int b) { return a + b; }
+int sum(int a, int b, int c) { return a + b + c; }
+
+✔ Overriding (ghi đè)
+
+class Animal {
+    void sound() {
+        System.out.println("Animal");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog");
+    }
+}
+
+| Tiêu chí   | Overloading  | Overriding           |
+| ---------- | ------------ | -------------------- |
+| Mục đích   | tiện lợi     | thay đổi hành vi     |
+| Tham số    | khác         | giống                |
+| Class      | cùng class   | khác class (kế thừa) |
+
+| Tên method | giống        | giống                |
+| Thời điểm  | compile-time | runtime              |
+
+
+
+-----------------------------------------------------------
+9. Tính trừu tượng (Abstraction)
+🔹 Khái niệm
+Ẩn chi tiết, chỉ hiển thị chức năng.
+
+🔹 Cách dùng
+✔ Abstract class
+abstract class Animal {
+    abstract void sound();
+}
+✔ Interface
+interface Animal {
+    void sound();
+}
+🔹 Ví dụ
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Dog");
+    }
+}
+
+| Tiêu chí | Interface                         | Abstract Class          |
+| -------- | --------------------------------- | ----------------------- |
+| Method   | chỉ abstract (trừ default/static) | có thể có method thường |
+| Biến     | hằng số                           | biến thường             |
+| Kế thừa  | nhiều interface                   | chỉ 1 class             |
+| Từ khóa  | implements                        | extends                 |
