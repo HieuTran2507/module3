@@ -1,0 +1,23 @@
+ // đảm bảo không trùng theo id
+ // hashCode là hàm biến object thành số nguyên
+
+ // class tạo object
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(o == null || this.getClass() != o.getClass()) return false;
+        Book book = (Book) o; // ép kiểu object thành Book
+        return Objects.equals(this.id,book.id);
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(this.id);
+    }
+
+
+ // class chứa phương thức object
+    private   Set<Book> books;
+    public Library() {
+        books = new HashSet<>();
+    }

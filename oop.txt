@@ -193,3 +193,10 @@ class Dog implements Animal {
 | Biến     | hằng số                           | biến thường             |
 | Kế thừa  | nhiều interface                   | chỉ 1 class             |
 | Từ khóa  | implements                        | extends                 |
+
+| Loại     | Có code trong interface? | Override?  | Cách gọi  |
+| -------- | ------------------------ | ---------- | --------- |
+| abstract | ❌ không                 | ✔ bắt buộc | object    |
+| default  | ✔ có                     | ✔ tùy      | object    |
+| static   | ✔ có                     | ❌ không    | Interface |
+
