@@ -1,4 +1,4 @@
 session 8: ex9, ex10
 session 9: ex1, ex2, ex3
 session 10: ex9, ex10
-session 12: ex1, ex2, ex3
+session 12: ex3
