@@ -1,7 +1,7 @@
 package ex1;
 
 public class Dogs extends Animals {
-    private String breed;
+    private final String breed;
 
     // constructor
     public Dogs(String name, int age, String breed) {

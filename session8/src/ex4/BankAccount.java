@@ -1,10 +1,10 @@
 package ex4;
 
 public class BankAccount implements IBank{
-    private String accId;
+    private final String accId;
     private double balance;
-    private String userName;
-    private String phoneNumber;
+    private final String userName;
+    private final String phoneNumber;
 
     public BankAccount(String accId, String userName, String phoneNumber) {
         this.accId = accId;

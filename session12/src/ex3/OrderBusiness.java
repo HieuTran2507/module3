@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class OrderBusiness {
-    private List<Order> orderList;
+    private final List<Order> orderList;
 
     public OrderBusiness() {
         orderList = new ArrayList<>();
@@ -39,7 +39,7 @@ public class OrderBusiness {
         else {
             while (true){
                 String status = inputSuggest.getString(sc,"nhập trạng thái đơn hàng (pending, shipped, delivered): ");
-                if(status.toLowerCase().equals("pending") || status.toLowerCase().equals("shipped")||status.toLowerCase().equals("delivered")){
+                if(status.equalsIgnoreCase("pending") || status.equalsIgnoreCase("shipped")|| status.equalsIgnoreCase("delivered")){
                     o.setStatus(status);
                     System.out.println("cập nhật trạng thái thành coong");
                     break;
@@ -77,7 +77,7 @@ public class OrderBusiness {
     // thống kê tổng doanh thu có trnajg thái deliverd
     public void deliveredStatistic(){
         List<Order> deliveredResult = orderList.stream()
-                .filter(s-> s.getStatus().toLowerCase().equals("delivered"))
+                .filter(s-> s.getStatus().equalsIgnoreCase("delivered"))
                 .toList();
         Double sum = 0.0;
         for (Order order : deliveredResult) {

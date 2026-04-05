@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class ex3 {
-    public static void main(String[] args){
+    static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         ArrayList<String> ds = new ArrayList<>();
         do{

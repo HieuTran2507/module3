@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MessageManage {
-    private List<Message> messages;
+    private final List<Message> messages;
 
     public MessageManage() {
         messages = new ArrayList<>();

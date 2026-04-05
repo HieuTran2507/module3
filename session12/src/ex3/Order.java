@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class Order {
     public static int autoID = 1;
 
-    private int orderId;
+    private final int orderId;
     private String customerName;
     private String phoneNumber;
     private String address;
@@ -108,11 +108,11 @@ public class Order {
         }
 
         // nhập trạng thái
-        if (defStatus.toLowerCase().equals("pending")) this.status = defStatus;
+        if (defStatus.equalsIgnoreCase("pending")) this.status = defStatus;
         else {
             while (true){
                 String status = inputSuggest.getString(sc,"nhập trạng thái đơn hàng (pending, shipped, delivered): ");
-                if(status.toLowerCase().equals("pending") || status.toLowerCase().equals("shipped")||status.toLowerCase().equals("delivered")){
+                if(status.equalsIgnoreCase("pending") || status.equalsIgnoreCase("shipped")|| status.equalsIgnoreCase("delivered")){
                     this.status = status;
                     break;
                 } else System.out.println("vui lòng nhập (pending, shipped, delivered)");

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ex2 {
-    public static void main(String[] args){
+    static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int totalStudents = 0;
         double totalMarks = 0;

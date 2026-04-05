@@ -1,7 +1,8 @@
 package ex3;
 
 public class Rectangle implements Colorable{
-    private double height,width;
+    private final double height;
+    private final double width;
     private String color;
 
     public Rectangle(double height, double width) {

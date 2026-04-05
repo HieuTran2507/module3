@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface ProductProcessor {
-    public abstract double calculateTotalValue(List<Product> products);
+    double calculateTotalValue(List<Product> products);
     static void printProductList(List<Product> products){
         products.forEach(p-> System.out.println(p));
     }

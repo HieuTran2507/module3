@@ -37,7 +37,7 @@ public class ex6 {
         return -1;
     }
 
-    public static void main(String[] args){
+    static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         // nhap kich thuoc mang
         System.out.print("nhap kich thuoc mang: ");

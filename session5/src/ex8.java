@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class ex8 {
-    public static void main(String[] args){
+    static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("nhap chuoi: ");
         String input = sc.nextLine();
 
         if(input.length()==0){
-            System.out.println("");
+            System.out.println();
             return;
         }
 
@@ -25,6 +25,6 @@ public class ex8 {
         // them ky tu cuoi cung
         result.append(input.charAt(input.length()-1));
         result.append(count);
-        System.out.println("chuoi sau khi nen: "+result.toString());
+        System.out.println("chuoi sau khi nen: "+ result);
     }
 }

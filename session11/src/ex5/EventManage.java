@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EventManage {
-    private List<Event> events;
+    private final List<Event> events;
 
     public EventManage() {
         events = new ArrayList<>();

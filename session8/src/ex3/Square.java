@@ -1,7 +1,7 @@
 package ex3;
 
 public class Square implements Colorable {
-    private double size;
+    private final double size;
     private String color;
 
     public Square(double size) {

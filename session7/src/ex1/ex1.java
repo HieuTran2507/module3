@@ -1,7 +1,7 @@
 package ex1;
 
 public class ex1 {
-    public static void main(String[] args){
+    static void main(String[] args){
         // tao doi tuong rectangle voi constructor mac dinh
         Rectangle rec1 = new Rectangle();
         System.out.println("hcn 1: ");

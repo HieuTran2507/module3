@@ -1,7 +1,7 @@
 package ex5;
 
 public class CategoryManagement implements ICRUD{
-    private Category[] categories = new Category[100];
+    private final Category[] categories = new Category[100];
     private int count = 0;
 
     @Override

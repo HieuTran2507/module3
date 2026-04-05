@@ -3,7 +3,7 @@ package ex5;
 import java.util.Scanner;
 
 public class ex5 {
-    public static void main(String[] args){
+    static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         CategoryManagement categoryManagement = new CategoryManagement();
         int choice;

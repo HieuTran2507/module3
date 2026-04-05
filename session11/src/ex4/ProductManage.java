@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class ProductManage {
-    private Map<Integer,Product> products;
+    private final Map<Integer,Product> products;
 
     public ProductManage() {
         products = new HashMap<>();

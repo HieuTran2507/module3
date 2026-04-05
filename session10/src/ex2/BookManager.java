@@ -3,7 +3,7 @@ package ex2;
 import java.util.HashMap;
 
 public class BookManager {
-    private HashMap<String, Book> books;
+    private final HashMap<String, Book> books;
 
     public BookManager() {
         books = new HashMap<>();

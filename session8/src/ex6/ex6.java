@@ -3,7 +3,7 @@ package ex6;
 import java.util.Scanner;
 
 public class ex6 {
-    public static void main(String[] args){
+    static void main(String[] args){
         BookManager manager = new BookManager();
         Scanner scanner = new Scanner(System.in);
         int choice = 0;

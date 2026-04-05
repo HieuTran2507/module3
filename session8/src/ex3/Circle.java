@@ -1,7 +1,7 @@
 package ex3;
 
 public class Circle implements Colorable{
-    private double radius;
+    private final double radius;
     private String color;
 
     public Circle(double radius) {

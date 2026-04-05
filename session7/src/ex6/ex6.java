@@ -7,7 +7,7 @@ public class ex6 {
     static ArrayList<Category> list = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args){
+    static void main(String[] args){
         int choice;
         do {
             System.out.println("\n===== MENU =====");

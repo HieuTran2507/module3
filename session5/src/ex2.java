@@ -1,5 +1,5 @@
 public class ex2 {
-    public static void main(String[] args){
+    static void main(String[] args){
         StringBuilder sb = new StringBuilder("hello, java world!");
         System.out.println("chuoi ban dau: "+sb);
 

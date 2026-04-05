@@ -1,0 +1,6 @@
+SELECT user, host FROM mysql.user;
+
+SELECT CURRENT_USER();
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+FLUSH PRIVILEGES;

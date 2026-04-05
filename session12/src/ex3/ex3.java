@@ -1,5 +1,6 @@
 package ex3;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class ex3 {
@@ -54,6 +55,5 @@ public class ex3 {
                     System.out.println("vui lòng nhập lựa chọn từ 1 - 10");
             }
         }
-
     }
 }

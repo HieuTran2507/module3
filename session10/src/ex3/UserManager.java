@@ -3,7 +3,7 @@ package ex3;
 import java.util.LinkedList;
 
 public class UserManager {
-    private LinkedList<User> users;
+    private final LinkedList<User> users;
 
     public UserManager() {
         users = new LinkedList<>();

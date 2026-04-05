@@ -1,5 +1,5 @@
 public class ex2 {
-    public static void main(String[] args){
+    static void main(String[] args){
         String name = "Trần Tuấn HIếu";
         int age = 24;
         String address = "Long Khánh";

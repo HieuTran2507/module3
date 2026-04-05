@@ -1,7 +1,7 @@
 package ex1;
 
 public class ex1 {
-    public static void main(String[] args){
+    static void main(String[] args){
         Animals[] animalArray = new Animals[2];
 
         // tao doi tuong dog va cat

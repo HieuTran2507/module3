@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ex7 {
-    public static void main(String[] args){
+    static void main(String[] args){
         int canh1, canh2, canh3;
         Scanner sc = new Scanner(System.in);
 

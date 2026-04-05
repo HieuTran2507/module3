@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookManager implements IBookManager{
-    private List<Book> books;
+    private final List<Book> books;
 
     public BookManager(){
         books = new ArrayList<>();

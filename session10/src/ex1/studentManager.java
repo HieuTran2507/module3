@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class studentManager {
     // khai bao arrayList students
-    private ArrayList<student> students;
+    private final ArrayList<student> students;
 
     // constructor khi tạo studentManger thì tạo luôn danh sách students rỗng
     public studentManager() {

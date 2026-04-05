@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class ex1 {
-    public static void main(String[] args){
+    static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         ArrayList<Double> dsDiem = new ArrayList<>();
         do{
@@ -111,7 +111,7 @@ public class ex1 {
         else{
             Collections.sort(arr);
             System.out.println("danh sach diem tang dan: ");
-            System.out.println(arr.toString());
+            System.out.println(arr);
         }
     }
 

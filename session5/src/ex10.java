@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class ex10 {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 

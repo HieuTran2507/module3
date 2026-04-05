@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductProcessorImpl implements ProductProcessor{
-    private List<Product> products;
+    private final List<Product> products;
 
     public ProductProcessorImpl() {
         products = new ArrayList<>();

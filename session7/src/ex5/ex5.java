@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ex5 {
     static Scanner sc = new Scanner(System.in);
     static ArrayList<Product> listProduct = new ArrayList<>();
-    public static void main(String[] args){
+    static void main(String[] args){
         int choice;
 
         do{

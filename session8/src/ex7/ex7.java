@@ -1,7 +1,7 @@
 package ex7;
 
 public class ex7 {
-    public static void main(String[] args){
+    static void main(String[] args){
         Employee emp = new Employee("An", "E01", 5000);
         Manager mgr = new Manager("Binh", "M01", 7000, 2000);
         Developer dev = new Developer("Cuong", "D01", 6000, "Java");

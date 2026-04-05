@@ -5,7 +5,7 @@ public class ex10 {
     static int[] arr = new int[100];
     static int size = 0;
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int choice;

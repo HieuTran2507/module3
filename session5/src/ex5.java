@@ -1,5 +1,5 @@
 public class ex5 {
-    public static void main(String[] args){
+    static void main(String[] args){
         int n = 100000; // tao so lan lap lon de thay ro su khac biet
 
         // STRING

@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class ProductBusiness {
-    private List<Product> products;
+    private final List<Product> products;
 
     public ProductBusiness() {
         products = new ArrayList<>();

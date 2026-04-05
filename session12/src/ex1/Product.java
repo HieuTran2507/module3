@@ -8,7 +8,7 @@ import java.util.Set;
 public class Product {
     private static int autoID = 1; // ID tự  tăng
 
-    private int pID;
+    private final int pID;
     private String pName;
     private Double pPrice;
     private String pCategory;

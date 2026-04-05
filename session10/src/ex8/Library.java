@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Library {
 
-    private   Set<Book> books;
+    private final Set<Book> books;
     public Library() {
         books = new HashSet<>();
     }

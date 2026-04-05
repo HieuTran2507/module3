@@ -2,7 +2,8 @@ package ex1;
 
 public class Rectangle {
     // thuoc tinh
-    private double length, width;
+    private final double length;
+    private final double width;
 
     // phuong thuc khong tham so
     public Rectangle() {

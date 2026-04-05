@@ -10,7 +10,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class AppointmentBusiness {
-    private List<Appointment> appointments;
+    private final List<Appointment> appointments;
 
     public AppointmentBusiness() {
         appointments = new ArrayList<>();

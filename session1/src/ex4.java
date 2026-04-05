@@ -1,5 +1,5 @@
 public class ex4 {
-    public static void main(String[] args){
+    static void main(String[] args){
         int a = 456;
         int b = 123;
 

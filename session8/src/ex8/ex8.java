@@ -1,7 +1,7 @@
 package ex8;
 
 public class ex8 {
-    public static void main(String[] args){
+    static void main(String[] args){
         Product p = new Product("Generic", 1000);
         Electronics e = new Electronics("Laptop", 2000);
         Clothing c = new Clothing("Shirt", 500);

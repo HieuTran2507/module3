@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ex6 {
-    public static void main(String[] args){
+    static void main(String[] args){
         float cd, cr, s, v;
 
         Scanner scanner = new Scanner(System.in);

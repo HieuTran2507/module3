@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ex6 {
-    public static void main(String[] args){
+    static void main(String[] args){
         System.out.print("nhập dãy số cần tính tổng: ");
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();

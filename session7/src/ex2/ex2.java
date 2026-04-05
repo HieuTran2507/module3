@@ -1,7 +1,7 @@
 package ex2;
 
 public class ex2 {
-    public static void main(String[] args){
+    static void main(String[] args){
         Book bk1 = new Book();
 
         bk1.setTitle("Java programming");
