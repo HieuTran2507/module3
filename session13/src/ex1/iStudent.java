@@ -7,6 +7,6 @@ public interface iStudent {
     void getAllStudents();
     void addStudent(Scanner sc);
     void updateStudent(Scanner sc);
-    void findID(Integer id);
-    void deleteStudent(Integer id);
+    Student findID(Integer id);
+    void deleteStudent(Scanner sc);
 }

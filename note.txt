@@ -1,16 +1,3 @@
-ss1 6
-ss2 10
-ss3 3
-ss4 10
-ss5 10
-ss6 3
-ss7 8
-ss8 10
-ss9 3
-ss10 10
-ss11 9
-ss12 3
-
 
 session 13: ex1 - ex10
 session 14: ex1 - ex9

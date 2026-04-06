@@ -1,13 +1,14 @@
 package ex1;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Student {
     private Integer id;
     private String name;
     private LocalDate bod;
     private String email;
-
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
     public Student() {
     }
 
@@ -61,7 +62,7 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", bod=" + bod +
+                ", bod=" + bod.format(formatter) +
                 ", email='" + email + '\'' +
                 '}';
     }

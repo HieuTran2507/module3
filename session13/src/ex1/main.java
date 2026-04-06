@@ -28,8 +28,11 @@ public class main {
                     manager.updateStudent(sc);
                     break;
                 case 4:
+                    manager.deleteStudent(sc);
                     break;
                 case 5:
+                    Integer id = inputSuggest.getInt(sc,"nhaajp id sinh viên cần tìm: ");
+                    manager.findID(id);
                     break;
                 case 6:
                     System.exit(0);

@@ -69,36 +69,43 @@ public class StudentBusiness implements iStudent{
 
     @Override
     public void updateStudent(Scanner sc) {
-        Integer id = inputSuggest.getInt(sc,"nhập id sinh viên cần update: ");
+        Student std = new Student();
+        Integer id;
         while (true){
+            id = inputSuggest.getInt(sc,"nhập id sinh viên cần update: ");
             if (id<=0) System.out.println("nhập id > 0");
-            else break;
+            else {
+                std = findID(id);
+                break;
+            }
         }
-        String name = inputSuggest.getString(sc, "nhaajp tên sinh viên: ");
-        LocalDate dob = inputSuggest.getDate(sc,"nhập ngày tháng năm sinh: ");
-        String email = inputSuggest.getString(sc,"nhập email sinh viên: ");
+        if (std!=null){
+            String name = inputSuggest.getString(sc, "nhaajp tên sinh viên: ");
+            LocalDate dob = inputSuggest.getDate(sc,"nhập ngày tháng năm sinh: ");
+            String email = inputSuggest.getString(sc,"nhập email sinh viên: ");
 
-        Connection conn = ConnectionDB.openConnection();
-        try {
-            CallableStatement call = conn.prepareCall("{call ex_update_student(?,?,?,?)}");
-            call.setInt(1,id);
-            call.setString(2,name);
-            call.setDate(3,java.sql.Date.valueOf(dob));
-            call.setString(4,email);
+            Connection conn = ConnectionDB.openConnection();
+            try {
+                CallableStatement call = conn.prepareCall("{call ex_update_student(?,?,?,?)}");
+                call.setInt(1,id);
+                call.setString(2,name);
+                call.setDate(3,java.sql.Date.valueOf(dob));
+                call.setString(4,email);
 
-            call.executeUpdate();
-            System.out.println("update thành công");
-            call.close();
-        } catch (SQLException e) {
-            System.out.println("update không thành công");
-            e.printStackTrace();
-        } finally {
-            ConnectionDB.closeConnection(conn);
-        }
+                call.executeUpdate();
+                System.out.println("update thành công");
+                call.close();
+            } catch (SQLException e) {
+                System.out.println("update không thành công");
+                e.printStackTrace();
+            } finally {
+                ConnectionDB.closeConnection(conn);
+            }
+        }else System.out.println("update không thành công");
     }
 
     @Override
-    public void findID(Integer id) {
+    public Student findID(Integer id) {
         Connection conn = ConnectionDB.openConnection();
         CallableStatement call = null;
         try {
@@ -112,32 +119,47 @@ public class StudentBusiness implements iStudent{
                         rs.getDate("day_of_birth").toLocalDate(),
                         rs.getString("email")
                 );
+                call.close();
                 System.out.println(std);
-            }else System.out.println("không tìm thấy id sinh viên");
+                return std;
+            }else {
+                System.out.println("không tìm thấy id sinh viên");
+                return null;
+            }
         } catch (SQLException e) {
             System.out.println("không tìm thấy id sinh viên");
             e.printStackTrace();
+            return null;
         }finally {
             ConnectionDB.closeConnection(conn);
         }
-
     }
 
     @Override
-    public void deleteStudent(Integer id) {
-        Connection conn = ConnectionDB.openConnection();
-        CallableStatement call = null;
-        try {
-            call = conn.prepareCall("{call ex_delete(?)}");
-            call.setInt(1,id);
-            int rs = call.executeUpdate();
-            if(rs>0) System.out.println("xóa thành công");
-            else System.out.println("xóa không thành công");
-        } catch (SQLException e) {
-            System.out.println("xóa không thành công");
-            e.printStackTrace();
-        } finally {
-            ConnectionDB.closeConnection(conn);
+    public void deleteStudent(Scanner sc) {
+        Integer id;
+        Student std = new Student();
+        while (true){
+            id = inputSuggest.getInt(sc,"nhập id sinh viên cần xóa: ");
+            if (id<0) System.out.println("vui lòng nhập i > 0");
+            else {
+                std = findID(id);
+                break;
+            }
+        }
+        if (std==null) System.out.println("xóa không thành công");
+        else {
+            Connection conn = ConnectionDB.openConnection();
+            try {
+                CallableStatement call = conn.prepareCall("{call ex_delete(?)}");
+                call.setInt(1,id);
+                call.executeUpdate();
+                call.close();
+                System.out.println("xóa sinh viên thành công");
+            } catch (SQLException e) {
+                System.out.println("Lỗi sql");
+                e.printStackTrace();
+            }
         }
     }
 }
