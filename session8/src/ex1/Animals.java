@@ -1,4 +1,4 @@
-package ex1_4;
+package ex1;
 
 public class Animals {
     private String name;
