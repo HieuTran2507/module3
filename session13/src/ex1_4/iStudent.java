@@ -1,6 +1,5 @@
-package ex1;
+package ex1_4;
 
-import java.util.List;
 import java.util.Scanner;
 
 public interface iStudent {

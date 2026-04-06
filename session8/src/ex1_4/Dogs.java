@@ -1,4 +1,4 @@
-package ex1;
+package ex1_4;
 
 public class Dogs extends Animals {
     private final String breed;

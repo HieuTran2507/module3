@@ -1,9 +1,7 @@
-package ex1;
+package ex1_4;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Product {
     private static int autoID = 1; // ID tự  tăng

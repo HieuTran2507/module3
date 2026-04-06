@@ -1,10 +1,9 @@
-package ex1;
+package ex1_4;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class ProductBusiness {
     private final List<Product> products;

@@ -1,7 +1,5 @@
 package ex2;
 
-import ex1.Product;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;

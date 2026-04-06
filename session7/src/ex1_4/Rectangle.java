@@ -1,4 +1,4 @@
-package ex1;
+package ex1_4;
 
 public class Rectangle {
     // thuoc tinh
