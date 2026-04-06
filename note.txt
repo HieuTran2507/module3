@@ -1,6 +1,17 @@
-session 8: ex9, ex10 ok
-session 9: ex1, ex2, ex3 ok
-session 10: ex9, ex10 ok
-session 13: ex1 - ex10 
+ss1 6
+ss2 10
+ss3 3
+ss4 10
+ss5 10
+ss6 3
+ss7 8
+ss8 10
+ss9 3
+ss10 10
+ss11 9
+ss12 3
+
+
+session 13: ex1 - ex10
 session 14: ex1 - ex9
 session 15: ex1
