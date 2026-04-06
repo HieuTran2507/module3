@@ -72,31 +72,28 @@ public class StudentBusiness implements iStudent{
         Integer id = inputSuggest.getInt(sc,"nhập id sinh viên cần update: ");
         while (true){
             if (id<=0) System.out.println("nhập id > 0");
-            else {
-                String name = inputSuggest.getString(sc, "nhaajp tên sinh viên: ");
-                LocalDate dob = inputSuggest.getDate(sc,"nhập ngày tháng năm sinh: ");
-                String email = inputSuggest.getString(sc,"nhập email sinh viên: ");
+            else break;
+        }
+        String name = inputSuggest.getString(sc, "nhaajp tên sinh viên: ");
+        LocalDate dob = inputSuggest.getDate(sc,"nhập ngày tháng năm sinh: ");
+        String email = inputSuggest.getString(sc,"nhập email sinh viên: ");
 
-                Student std = new Student(name,dob,email);
-                Connection conn = ConnectionDB.openConnection();
-                try {
-                    CallableStatement call = conn.prepareCall("{call ex_update_student(?,?,?,?)}");
-                    call.setInt(1,id);
-                    call.setString(2,std.getName());
-                    call.setDate(3,java.sql.Date.valueOf(std.getBod()));
-                    call.setString(4,std.getEmail());
+        Connection conn = ConnectionDB.openConnection();
+        try {
+            CallableStatement call = conn.prepareCall("{call ex_update_student(?,?,?,?)}");
+            call.setInt(1,id);
+            call.setString(2,name);
+            call.setDate(3,java.sql.Date.valueOf(dob));
+            call.setString(4,email);
 
-                    call.executeUpdate();
-                    System.out.println("update thành công");
-                    call.close();
-                } catch (SQLException e) {
-                    System.out.println("update không thành công");
-                    e.printStackTrace();
-                } finally {
-                    ConnectionDB.closeConnection(conn);
-                }
-                break;
-            }
+            call.executeUpdate();
+            System.out.println("update thành công");
+            call.close();
+        } catch (SQLException e) {
+            System.out.println("update không thành công");
+            e.printStackTrace();
+        } finally {
+            ConnectionDB.closeConnection(conn);
         }
     }
 
